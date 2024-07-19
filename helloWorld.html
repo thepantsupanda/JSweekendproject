@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weekend Project</title>
+    <style>
+        #btnHello {
+            width: 300px;
+            height: 150px;
+            font-size: larger;
+        }
+        #worldArea {
+            font-style: italic;
+        }
+    </style>
+    <script type="text/javascript">
+        function sayWorld() {
+            
+            let worldAreaText = document.getElementById("worldArea").innerHTML;
+
+            if (worldAreaText === "") {
+                document.getElementById("worldArea").innerHTML = "WORLD";
+            } else {
+                document.getElementById("worldArea").innerHTML = "";
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <button id="btnHello" onclick="sayWorld()">Hello...</button>
+    <h1 id="worldArea"></h1>
+</body>
+</html>

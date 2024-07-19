@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mini Project 1</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+        .button {
+            padding: 3% 7%;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            border-radius: 15px;
+        }
+        #btnOne {
+            background-color: red;
+        }
+        #btnTwo {
+            background-color: blue;
+        }
+        #btnThree {
+            background-color: green;
+        }
+        #btnFour {
+            background-color: white;
+        }
+    </style>
+    <script>
+        function changeColor(btnColor){
+            switch (btnColor) {
+                case 'red':
+                    document.body.style.background = 'red';
+                    break;
+                case 'blue':
+                    document.body.style.background = 'blue';
+                    break;
+                case 'green':
+                    document.body.style.background = 'green';
+                    break;
+                case 'random':
+                    let redVal = Math.round(Math.random() * 255);
+                    let greenVal = Math.round(Math.random() * 255);
+                    let blueVal = Math.round(Math.random() * 255);
+                    let color = `rgb(${redVal}, ${greenVal}, ${blueVal})`;
+                    document.body.style.background = color;
+                    break;
+                default:
+                    alert("What's happening??? @_@");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Pick a color! :3</h1>
+    <button class="button" id="btnOne" onclick="changeColor('red')">Red</button>
+    <button class="button" id="btnTwo" onclick="changeColor('blue')">Blue</button>
+    <button class="button" id="btnThree" onclick="changeColor('green')">Green</button>
+    <button class="button" id="btnFour" onclick="changeColor('random')">Random</button>
+</body>
+</html>
