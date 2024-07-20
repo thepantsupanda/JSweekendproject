@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mini Project 2</title>
+    <style></style>
+    <script>
+        function checkPalindrome() {
+
+            let isPalindrome = true;
+            let inputString = document.getElementById("textInput").value;
+            
+            let left = 0;
+            let right = inputString.length -1
+
+            while (left < right) {
+                if (inputString[left] != inputString[right]) {
+                    isPalindrome = false;
+                }
+                left++;
+                right--;
+            }
+
+            if (isPalindrome) {
+                document.getElementById("resultMessage").innerHTML = "This is a palindrome!"
+            } else {
+                document.getElementById("resultMessage").innerHTML = "This is not a palindrome."
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <input id="textInput" type="text" placeholder="Enter a word">
+    <input type="submit" value="Submit" onclick="checkPalindrome()">
+    <h2 id="resultMessage"></h2>
+</body>
+</html>
